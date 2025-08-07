@@ -152,7 +152,7 @@
       }: {
         formatter = pkgs.alejandra;
         packages = import ./scripts args;
-        devshells = import ./devshells {
+        shells = import ./shells {
           inherit pkgs inputs;
         };
       };
