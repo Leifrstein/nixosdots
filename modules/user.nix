@@ -1,0 +1,33 @@
+{ config, ... }:
+{
+  flake.meta.username = "leifrstein";
+
+  unify.modules.general =
+    let
+      inherit (config.flake.meta) username persistDir passwordDir;
+    in
+    {
+      nixos =
+        { pkgs, hostConfig, ... }:
+        {
+          users.users = {
+            ${username} = {
+              isNormalUser = true;
+              extraGroups = [
+                "wheel" # Enable ‘sudo’ for the user
+              ];
+              hashedPasswordFile = "${passwordDir}/${username}";
+            };
+            root.hashedPasswordFile = "${passwordDir}/root";
+          };
+
+          # persistDir is needed for boot because it contains password hashes
+          fileSystems.${persistDir}.neededForBoot = true;
+        };
+
+      home.home = {
+        username = username;
+        homeDirectory = "/home/${username}";
+      };
+    };
+}
