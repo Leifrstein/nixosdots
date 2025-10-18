@@ -1,5 +1,5 @@
-# dotfiles
-My personal dotfiles for NixOS
+# Description
+Just the configuration I use on my desktop running NixOS.
 
 # Usage:
 Run the following command from a NixOS installation medium:
@@ -8,4 +8,4 @@ Run the following command from a NixOS installation medium:
 sudo nix --extra-experimental-features "nix-command flakes" run github:Leifrstein/nixosdots#install
 ```
 
-I highly recommend that you thoroughly read `scripts/install.nix` BEFORE running it so that you know what it will do in advance.
+I used LibrePhoenix's structure for a while until I found Anomalocaridid's (which resembled the basic Misterio77 starter config that I was aiming toward). All credits to the way I've organised this repo go to them.

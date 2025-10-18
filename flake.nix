@@ -1,170 +1,138 @@
-# DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
-# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "My personal dotfiles for NixOS";
-
-  outputs = inputs: import ./outputs.nix inputs;
+  description = "My NixOS dots";
 
   inputs = {
-    catppuccin = {
-      url = "github:catppuccin/nix";
-    };
-    catppuccin-fractal-wallpapers = {
-      flake = false;
-      url = "github:psylopneunonym/Catppuccin-Fractal-Wallpapers";
-    };
-    catppuccin-ohmyrepl = {
-      flake = false;
-      url = "github:catppuccin/ohmyrepl";
-    };
-    catppuccin-prismlauncher = {
-      flake = false;
-      url = "github:catppuccin/prismlauncher";
-    };
-    catppuccin-userstyles-nix = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:different-name/catppuccin-userstyles-nix?rev=b347a087e34ddb4ce645014744b101f217350209";
-    };
-    devshell = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:numtide/devshell";
-    };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     disko = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
       url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-file = {
-      url = "github:vic/flake-file";
-    };
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-    };
-    ghostty-shaders = {
-      flake = false;
-      url = "github:hackr-sh/ghostty-shaders";
-    };
+
     home-manager = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    ignis = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:linkfrg/ignis";
-    };
-    impermanence = {
-      url = "github:nix-community/impermanence";
-    };
-    import-tree = {
-      url = "github:vic/import-tree";
-    };
-    #lix = {
-    #  flake = false;
-    #  url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-    #};
-    #lix-module = {
-    #  inputs = {
-    #    lix = {
-    #      follows = "lix";
-    #    };
-    #    nixpkgs = {
-    #      follows = "nixpkgs";
-    #    };
-    #  };
-    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-    #};
-    niri = {
-      url = "github:sodiboo/niri-flake";
-    };
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-    };
+
+    impermanence.url = "github:nix-community/impermanence";
+
+    # Use nix-index without having to generate the database locally
     nix-index-database = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
       url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-yazi-plugins = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:lordkekz/nix-yazi-plugins";
+
+    # Flake framework
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # Flake Parts module for defining configs
+    ez-configs = {
+      url = "github:ehllie/ez-configs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixago = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:nix-community/nixago";
-    };
-    nixos-facter-modules = {
-      url = "github:numtide/nixos-facter-modules";
-    };
-    nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
-    };
+
+    # Nix user repository
     nur = {
-      inputs = {
-        flake-parts = {
-          follows = "flake-parts";
-        };
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
       url = "github:nix-community/NUR";
-    };
-    spicetify-nix = {
       inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
       };
-      url = "github:Gerg-L/spicetify-nix";
     };
-    swi-lsp-server = {
+
+    # Generate configs
+    nixago = {
+      url = "github:nix-community/nixago";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Niri compositor
+    # Provides a binary cache, so do not follow inputs
+    niri.url = "github:sodiboo/niri-flake";
+
+    # For theming
+    stylix = {
+      url = "github:danth/stylix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        #home-manager.follows = "home-manager";
+      };
+    };
+
+    ttf-to-tty = {
+      url = "github:Sigmanificient/ttf_to_tty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Catppuccin Theming
+    # Provides a binary cache, so do not follow inputs
+    catppuccin.url = "github:catppuccin/nix";
+
+    # Extra Catppuccin themes
+    catppuccin-ohmyrepl = {
+      url = "github:catppuccin/ohmyrepl";
       flake = false;
-      url = "github:jamesnvc/lsp_server";
     };
-    unify = {
-      inputs = {
-        flake-parts = {
-          follows = "flake-parts";
-        };
-        home-manager = {
-          follows = "home-manager";
-        };
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "git+https://codeberg.org/quasigod/unify";
+
+    # Catppuccin wallpapers
+    catppuccin-wallpapers = {
+      url = "github:orangci/walls-catppuccin-mocha";
+      flake = false;
+    };
+
+    # Gaming tweaks
+    # Provides a binary cache, so do not follow inputs
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
+    # Spotify customization
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Discord customization
+    nixcord = {
+      url = "github:KaylorBen/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Alejandra nix code formatter
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
+  outputs = inputs @ {
+    nixpkgs,
+    flake-parts,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} rec {
+      imports = [
+        inputs.ez-configs.flakeModule
+      ];
+
+      ezConfigs = {
+        root = ./.;
+        globalArgs = {
+          inherit inputs;
+          inherit (flake) diskoConfigurations;
+        };
+      };
+
+      # Expose this to use flake directly with Disko
+      flake.diskoConfigurations = import ./disko-configurations;
+
+      systems = ["x86_64-linux"];
+
+      perSystem = args @ {
+        pkgs,
+        inputs',
+        ...
+      }: {
+        formatter = pkgs.alejandra;
+        packages = import ./scripts args;
+      };
+    };
 }
