@@ -23,6 +23,8 @@ in
           "/var/lib/nixos" # Holds state needed for stable uids and gids for users and groups
           ## systemd
           "/var/lib/systemd" # Systemd state directory, used for numerous things
+		  ## TMP
+		  "/tmp" # Persist tmp so it's not mounted on tmpfs and ensure there's enough space for rebuilds, it'll be cleaned by setting boot.tmp.cleanOnBoot to true
           # Nix config
           {
             directory = "/etc/nixos";
@@ -54,4 +56,5 @@ in
         ];
       };
     };
+	boot.tmp.cleanOnBoot = true; # Cleans the persisted tmp on boot
 }
