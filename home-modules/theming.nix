@@ -13,8 +13,8 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Tokyonight-Dark-BL-MB";
-      package = pkgs.tokyonight‑gtk-theme;
+      package = pkgs.rose-pine-gtk-theme;
+      name = rose-pine;
     };
   };
 
@@ -31,7 +31,7 @@
     catppuccin-catwalk
     catppuccin-whiskers
     just
-    tokyonight-gtk-theme
+    rose-pine-gtk-theme
   ];
 
   # Inherit system-level settings
