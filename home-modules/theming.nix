@@ -12,7 +12,7 @@
     cursorTheme = config.stylix.cursor;
     iconTheme = {
       package = pkgs.papirus-icon-theme;
-      name = "Papirus";
+      name = "Papirus-Dark";
     };
   };
 
