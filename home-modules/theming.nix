@@ -5,8 +5,6 @@
   ...
 }: {
 
-  imports = [inputs.catppuccin.homeManagerModules.catppuccin];
-
   gtk = {
     enable = true;
     cursorTheme = config.stylix.cursor;
@@ -14,12 +12,12 @@
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
     };
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      accent = "mauve";
-      size = "standard";
-      tweaks = ["normal"];
+    theme = {
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight‑gtk-theme.override {
+        colorVariants = ["dark"];
+        tweakVarians = ["macos"];
+      };
     };
   };
 
