@@ -1,4 +1,5 @@
 {...}: {
+# Reminder to backup the key required to push. After fresh install, put it in .ssh and navigate to the dotfiles to do git push and finish setup.
   programs.git = {
     enable = true;
     userEmail = "lucaspc@pm.me";
