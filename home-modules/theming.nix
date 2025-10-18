@@ -8,10 +8,10 @@
   gtk = {
     enable = true;
     cursorTheme = config.stylix.cursor;
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
+    #iconTheme = {
+    #  package = pkgs.papirus-icon-theme;
+    #  name = "Papirus-Dark";
+    #};
     theme = {
       package = pkgs.rose-pine-gtk-theme;
       name = "rose-pine";
