@@ -9,6 +9,6 @@
       wayland.enable = true;
       package = pkgs.kdePackages.sddm;
     };
-    defaultSession = "niri";
+    #defaultSession = "niri";
   };
 }
