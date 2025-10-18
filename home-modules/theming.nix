@@ -34,6 +34,7 @@
     catppuccin-catwalk
     catppuccin-whiskers
     just
+    tokyonight-gtk-theme
   ];
 
   # Inherit system-level settings
