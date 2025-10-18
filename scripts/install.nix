@@ -37,7 +37,7 @@
           # Select config from flake to install
           PS3="Select device config to install: "
           # Dynamically retrieve list of available configs
-          device_list="$(nix --extra-experimental-features "nix-command flakes pipe-operators" flake show --json $FLAKE |
+          device_list="$(nix --extra-experimental-features "nix-command flakes" flake show --json $FLAKE |
             jq --raw-output ".nixosConfigurations | keys[]")"
 
           select device in $device_list "quit"; do

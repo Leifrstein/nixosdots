@@ -3,18 +3,18 @@
   flake-file.inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-      flake = false;
-    };
+    #lix = {
+    #  url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+    #  flake = false;
+    #};
 
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        lix.follows = "lix";
-      };
-    };
+    #lix-module = {
+    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+    #  inputs = {
+    #    nixpkgs.follows = "nixpkgs";
+    #    lix.follows = "lix";
+    #  };
+    #};
 
     # Use nix-index without having to generate the database locally
     nix-index-database = {
@@ -34,7 +34,7 @@
             experimental-features = [
               "nix-command"
               "flakes"
-              "pipe-operator" # Lix-specific feature
+              #"pipe-operator" # Lix-specific feature
             ];
             auto-optimise-store = true;
             repl-overlays = [ ./_repl-overlay.nix ]; # Lix-specific setting
