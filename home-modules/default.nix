@@ -21,9 +21,9 @@
       killall
       brightnessctl
       playerctl
-      xdg-desktop-portal
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
+      #xdg-desktop-portal
+      #xdg-desktop-portal-gnome
+      #xdg-desktop-portal-gtk
       pavucontrol
       qalculate-gtk
       gammastep
@@ -40,13 +40,13 @@
       qbittorrent
       nicotine-plus
       system-config-printer
-      onlyoffice-bin
+      #onlyoffice-bin
       calibre
       zotero
       gimp
       geany
-      swaynotificationcenter
-      waybar
+      #swaynotificationcenter
+      #waybar
       inkscape
       syncplay
       yt-dlp
@@ -57,7 +57,7 @@
       libmediainfo
       tenacity
       imagemagick
-      qgis
+      #qgis
       texinfo
       newsboat
       timer
@@ -67,12 +67,12 @@
       pciutils
       dua
       gparted
-      nautilus
-      nautilus-open-any-terminal
+      #nautilus
+      #nautilus-open-any-terminal
       xarchiver
       sushi
       jq
-      woeusb
+      #woeusb
       usbimager
       logseq
       filezilla
