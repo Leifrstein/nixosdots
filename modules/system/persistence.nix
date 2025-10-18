@@ -10,8 +10,6 @@ in
 
   flake-file.inputs.impermanence.url = "github:nix-community/impermanence";
 
-  boot.tmp.cleanOnBoot = true; # Cleans the persisted tmp on boot
-
   unify.modules.general.nixos =
     { config, ... }:
     {
