@@ -105,7 +105,7 @@
             "fzf-fish"
             "grc"
             "plugin-sudope"
-          ];
+          ]
         );
     };
     ripgrep.enable = true;
