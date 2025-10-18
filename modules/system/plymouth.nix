@@ -1,7 +1,7 @@
 {
   unify.modules.general.nixos.boot = {
     plymouth.enable = true;
-    # Below settings are necessar to show graphical LUKS password prompt
+    # Below settings are necessary to show graphical LUKS password prompt
     # Silence first boot output
     consoleLogLevel = 3;
     initrd = {
