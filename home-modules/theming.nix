@@ -13,11 +13,8 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Tokyonight-Dark";
-      package = pkgs.tokyonight‑gtk-theme.override {
-        colorVariants = ["dark"];
-        tweakVarians = ["macos"];
-      };
+      name = "Tokyonight-Dark-BL-MB";
+      package = pkgs.tokyonight‑gtk-theme;
     };
   };
 
