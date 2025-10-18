@@ -4,8 +4,8 @@
   osConfig,
   ...
 }: {
-  # Does not use global enable option for some reason
-  catppuccin.gtk.enable = true;
+
+  imports = [inputs.catppuccin.homeManagerModules.catppuccin];
 
   gtk = {
     enable = true;
@@ -13,6 +13,13 @@
     iconTheme = {
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
+    };
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "mauve";
+      size = "standard";
+      tweaks = ["normal"];
     };
   };
 
