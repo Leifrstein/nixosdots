@@ -54,10 +54,13 @@
         id = 1;
         # Un-break certain websites
         settings."webgl.disabled" = false;
-        extensions.packages = with firefox-addons; [
-          canvasblocker # Recommended for enabled WebGL
-          bitwarden
-        ];
+        extensions = {
+          packages = with firefox-addons; [
+            canvasblocker # Recommended for enabled WebGL
+            bitwarden
+          ];
+          force = true;
+        };
       };
       default = {
         extensions = {
