@@ -20,7 +20,6 @@
     umu-launcher
     #logmein-hamachi
     #haguichi
-    xivlauncher
   ];
 
   # Enable wine-ge's fsync support
