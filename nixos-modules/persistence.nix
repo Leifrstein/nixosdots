@@ -57,6 +57,8 @@
       ".config/geany" # Geany IDE configuration
       ".local/bin" # AppImage binaries
       ".local/share/applications" # AppImage misc.
+      ".local/share/keyrings" # Gnome Keyrings
+      ".local/share/nautilus" # Nautilus state
       ".local/share/TelegramDesktop" # Telegram account data
       ".librewolf" # Librewolf data
       "Sync" # Syncthing
