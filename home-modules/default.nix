@@ -14,8 +14,6 @@
     )
   );
 
-  home-manager.backupFileExtension = "backup";
-
   home = {
     homeDirectory = "/home/${config.home.username}";
     packages = with pkgs; [
