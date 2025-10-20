@@ -261,7 +261,7 @@
 
         "Print".action = actions.screenshot;
         #"Ctrl+Print".action = actions.screenshot-screen;
-        "Alt+Print".action = actions.screenshot-window;
+        #"Alt+Print".action = actions.screenshot-window;
 
         # The quit action will show a confirmation dialog to avoid accidental exits.
         "Mod+Shift+E".action = actions.quit;
