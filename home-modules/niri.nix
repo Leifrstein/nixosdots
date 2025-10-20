@@ -259,7 +259,7 @@
         "Mod+V".action = actions.toggle-window-floating;
         "Mod+Shift+V".action = actions.switch-focus-between-floating-and-tiling;
 
-        "Print".action = actions.screenshot;
+        #"Print".action = actions.screenshot;
         #"Ctrl+Print".action = actions.screenshot-screen;
         #"Alt+Print".action = actions.screenshot-window;
 
