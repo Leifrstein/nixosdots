@@ -33,25 +33,28 @@
       };
     };
 
-    configFile."handlr/handlr.toml".source =
-      (inputs.nixago.lib.${pkgs.system}.make {
-        data = {
-          enable_selector = false;
-          selector = "fuzzel --dmenu --prompt='Open With: '";
-          handlers = [
-            {
-              exec = "freetube %u";
-              regexes = ["youtu(be.com|.be)"];
-            }
-            {
-              exec = "handlr open steam://openurl/%u";
-              regexes = ["^https://([[:alpha:]]*\.)?steam(powered|community).com/"];
-            }
-          ];
-        };
-        output = "handlr.toml";
-      })
-      .configFile;
+    configFile."handlr/handlr.toml" = {
+      force = true;
+      source =
+        (inputs.nixago.lib.${pkgs.system}.make {
+          data = {
+            enable_selector = false;
+            selector = "fuzzel --dmenu --prompt='Open With: '";
+            handlers = [
+              {
+                exec = "freetube %u";
+                regexes = ["youtu(be.com|.be)"];
+              }
+              {
+                exec = "handlr open steam://openurl/%u";
+                regexes = ["^https://([[:alpha:]]*\.)?steam(powered|community).com/"];
+              }
+            ];
+          };
+          output = "handlr.toml";
+        })
+        .configFile;
+      };
   };
 
   home.packages = with pkgs; [
