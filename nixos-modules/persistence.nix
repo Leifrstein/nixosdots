@@ -41,6 +41,7 @@
       ".config/lutris" # Lutris games and settings
       ".config/unity3d" # Needed for some games' settings
       ".config/0ad" # 0 A.D. configuration
+      ".config/obs-studio" # OBS configuration
       ".local/share/lutris" # Lutris runtime data
       ".local/share/PrismLauncher" # Prism Launcher data
       ".local/share/Steam" # Steam games and save data
@@ -60,6 +61,9 @@
       ".local/share/keyrings" # Gnome Keyrings
       ".local/share/nautilus" # Nautilus state
       ".local/share/TelegramDesktop" # Telegram account data
+      ".local/state/lazygit"
+      ".local/state/wireplumber"
+      ".mozilla" # Firefox data
       ".librewolf" # Librewolf data
       "Sync" # Syncthing
       ".tuxpaint" # Tux Paint saves
