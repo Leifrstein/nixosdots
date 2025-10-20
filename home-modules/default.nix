@@ -25,6 +25,7 @@
       #xdg-desktop-portal-gnome
       #xdg-desktop-portal-gtk
       pavucontrol
+      pwvucontrol
       qalculate-gtk
       gammastep
       numbat
