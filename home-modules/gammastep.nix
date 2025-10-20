@@ -1,6 +1,6 @@
 {
   services.gammastep = {
-    enable = false;
+    enable = true;
     enableVerboseLogging = true;
     #provider = "geoclue2"; # not working
     provider = "manual";
