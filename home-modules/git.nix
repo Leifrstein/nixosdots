@@ -7,6 +7,12 @@
         email = "lucaspc@pm.me";
         name = "Lucas";
       };
+      extraConfig = {
+        init.defaultBranch = "main";
+        core.autocrlf = "input";
+        merge.conflictstyle = "diff3";
+        diff.colorMoved = "default";
+      };
     };
     delta = {
       enable = true;
@@ -15,12 +21,6 @@
         navigate = true;
         interactive.keep-plus-minus-markers = false;
       };
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-      core.autocrlf = "input";
-      merge.conflictstyle = "diff3";
-      diff.colorMoved = "default";
     };
     lazygit = {
       enable = true;
