@@ -8,8 +8,6 @@
           email = "lucaspc@pm.me";
           name = "Lucas";
         };
-      };
-      extraConfig = {
         init.defaultBranch = "main";
         core.autocrlf = "input";
         merge.conflictstyle = "diff3";
