@@ -3,9 +3,11 @@
   programs = {
     git = {
       enable = true;
-      user = {
-        email = "lucaspc@pm.me";
-        name = "Lucas";
+      settings = {
+        user = {
+          email = "lucaspc@pm.me";
+          name = "Lucas";
+        };
       };
       extraConfig = {
         init.defaultBranch = "main";
