@@ -24,7 +24,7 @@
       #xdg-desktop-portal
       #xdg-desktop-portal-gnome
       #xdg-desktop-portal-gtk
-      pavucontrol
+      #pavucontrol
       pwvucontrol
       qalculate-gtk
       gammastep
