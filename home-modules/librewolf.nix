@@ -41,10 +41,13 @@
           lockPref("extensions.activeThemeID", "${catppuccin-firefox.addonId}");
           // Use same search engine for private browsing
           lockPref("browser.search.separatePrivateDefault", false);
-          // Set what to clear on shutdown
+          // Set what to keep on shutdown
           lockPref("privacy.clearOnShutdown.history", false);
+          lockPref("privacy.clearOnShutdown_v2.cache", false);
+          lockPref("privacy.clearOnShutdown_v2.cookiesAndStorage", false);
+          lockPref("privacy.clearOnShutdown_v2.formdata", true);
           lockPref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false);
-          lockPref("privacy.clearOnShutdown.cookies", false);
+          lockPref("privacy.clearOnShutdown_v2.siteSettings", false);
           lockPref("network.cookie.lifetimePolicy", 0);
         '';
     };
@@ -58,6 +61,8 @@
           packages = with firefox-addons; [
             canvasblocker # Recommended for enabled WebGL
             bitwarden
+            firefox-color
+            ublock-origin
           ];
           force = true;
         };
@@ -103,6 +108,53 @@
                   selectionColor = palette.surface2.hex;
                 };
                 previewNewDesign = true;
+              };
+            };
+
+            "redirector@einaregilsson.com" = {
+              force = true;
+              settings = {
+                redirects = [
+                  {
+                    description = "FreeTube";
+                    exampleUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                    # Normally automatically generated, but will not be properly generated if missing
+                    # Does not cause serious problems if missing, just mangles example in redirector list
+                    exampleResult = "freetube://https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                    includePattern = "((https://)?(www\\.)?youtu(be\\.com|\\.be)/.*)";
+                    redirectUrl = "freetube://$1";
+                    patternType = "R"; # Regular expression
+                    # Required or redirector will not work
+                    appliesTo = [
+                      "main_frame"
+                    ];
+                  }
+                  {
+                    description = "Steam Client";
+                    exampleUrl = "https://store.steampowered.com/";
+                    # Normally automatically generated, but will not be properly generated if missing
+                    # Does not cause serious problems if missing, just mangles example in redirector list
+                    exampleResult = "steam://openurl/https://store.steampowered.com/";
+                    includePattern = "^(https://(.*\\.)?steam(powered|community).com/)$";
+                    redirectUrl = "steam://openurl/$1";
+                    patternType = "R"; # Regular expression
+                    appliesTo = [
+                      "main_frame"
+                    ];
+                  }
+                  {
+                    description = "[Farside] General Entry";
+                    exampleUrl = "https://m.youtube.com/watch?v=dQw4w9WgXcQ";
+                    # Normally automatically generated, but will not be properly generated if missing
+                    # Does not cause serious problems if missing, just mangles example in redirector list
+                    exampleResult = "https://farside.link/youtube.com/watch?v=dQw4w9WgXcQ";
+                    includePattern = "^(?:https?://)?(?:www\\.)?(?:\\w{2;}\\.)?(?:mobile\\.|m\\.)?((?:imdb|imgur|instagram|medium|odysee|quora|reddit|tiktok|translate\\.google|wikipedia|youtube)\\.(?:com|org|au|de|co|cn).*)$";
+                    redirectUrl = "https://farside.link/$1";
+                    patternType = "R"; # Regular expression
+                    # Required or redirector will not work
+                    appliesTo = ["main_frame"];
+                  }
+                ];
               };
             };
 
