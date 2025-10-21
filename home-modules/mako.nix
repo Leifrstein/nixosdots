@@ -11,7 +11,7 @@
       output = "DP-3";
       border-size = 2;
       default-timeout = 5000;
-      format = "<b>%s</b>\n\n%b";
+      format = "<b>%s</b>\\n%b";
     };
   };
 }
