@@ -86,6 +86,8 @@
             istilldontcareaboutcookies
             violentmonkey
             reddit-enhancement-suite
+            enhancer-for-youtube
+            sponsorblock
             # Reminder to install xBrowserSync, can't be done declaratively to my knowledge
             ublacklist
           ];
