@@ -40,7 +40,7 @@
             "tray"
             "custom/separator"
             "clock"
-            "custom/separator"
+            #"custom/separator"
             #"custom/swaync"
           ];
           #
