@@ -273,10 +273,10 @@
         	border-radius: 1rem;
         }
 
-        //#custom-swaync {
-        //	color: @yellow;
-        //	border-radius: 1rem;
-        //}
+        /*#custom-swaync {
+        	color: @yellow;
+        	border-radius: 1rem;
+        }*/
       '';
     };
   };
