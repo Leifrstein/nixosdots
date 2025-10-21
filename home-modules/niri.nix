@@ -124,12 +124,12 @@
       {
         command = ["qbittorrent"];
       }
-      #{
-	  #  command = ["mako"];
-	  #}
-	  {
-		command = ["swaync"];
+      {
+	    command = ["mako"];
 	  }
+	  #{
+		#command = ["swaync"];
+	  #}
     ];
 
     binds = let

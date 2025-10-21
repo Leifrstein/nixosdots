@@ -25,7 +25,8 @@
       #xdg-desktop-portal-gnome
       #xdg-desktop-portal-gtk
       #pavucontrol
-      pwvucontrol
+      lxqt.pavucontrol-qt
+      #pwvucontrol
       qalculate-gtk
       gammastep
       numbat
@@ -46,8 +47,8 @@
       zotero
       gimp
       geany
-      swaynotificationcenter
-      #mako
+      #swaynotificationcenter
+      mako
       waybar
       inkscape
       syncplay

@@ -10,6 +10,7 @@
         icon-theme = config.gtk.iconTheme.name;
         terminal = "handlr launch x-scheme-handler/terminal --";
       };
+      border.radius = 0;
     };
   };
 }
