@@ -12,7 +12,6 @@
       margin = "10,10,10";
       output = "DP-3";
       border-size = 2;
-      defaultTimeout = 5000;
     };
     extraConfig = ''
       format=<b>%s</b>\n\n%b
