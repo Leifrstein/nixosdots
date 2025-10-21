@@ -135,7 +135,7 @@
           "clock" = {
             tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
             interval = 60;
-            format = " {:%H:%M}";
+            format = " {:%H:%M} ";
             max-length = 25;
           };
 
