@@ -25,8 +25,9 @@
       #xdg-desktop-portal-gnome
       #xdg-desktop-portal-gtk
       #pavucontrol
-      lxqt.pavucontrol-qt
-      #pwvucontrol
+      #lxqt.pavucontrol-qt
+      satty
+      pwvucontrol
       qalculate-gtk
       gammastep
       numbat

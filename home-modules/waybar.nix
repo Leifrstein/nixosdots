@@ -106,7 +106,7 @@
                 ""
               ];
             };
-            on-click = "pavucontrol-qt";
+            on-click = "pwvucontrol";
           };
           "network" = {
             format-wifi = " {signalStrength}%";
