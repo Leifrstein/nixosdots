@@ -27,6 +27,8 @@
       #pavucontrol
       #lxqt.pavucontrol-qt
       satty
+      grim
+      slurp
       pwvucontrol
       qalculate-gtk
       gammastep

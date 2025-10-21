@@ -4,6 +4,8 @@
       [general]
       copy-command = "wl-copy"
       corner-roundness = 0
+      initial-tool = crop
+      disable-notifications = true
 
       [font]
       family = "FiraCode Nerd Font"

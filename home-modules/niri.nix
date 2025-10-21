@@ -267,6 +267,7 @@
         "Mod+Shift+V".action = actions.switch-focus-between-floating-and-tiling;
 
         #"Print".action = actions.screenshot;
+        #"Print".action = sh "grim -g \'$(slurp)\' - | satty --filename - --output-filename - --copy-command wl-copy";
         #"Ctrl+Print".action = actions.screenshot-screen;
         #"Alt+Print".action = actions.screenshot-window;
 

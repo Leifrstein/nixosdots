@@ -56,7 +56,7 @@
       ".config/qBittorrent" # qBittorrent configuration
       ".local/share/qBittorrent" # qBittorrent state
       ".config/geany" # Geany IDE configuration
-      ".local/bin" # AppImage binaries
+      ".local/bin" # Misc binaries
       ".local/share/applications" # AppImage misc.
       ".local/share/keyrings" # Gnome Keyrings
       ".local/share/nautilus" # Nautilus state
