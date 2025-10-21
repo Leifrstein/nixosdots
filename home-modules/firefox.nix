@@ -116,7 +116,7 @@
 						"experiments.manifest.uri" = "";
 						"browser.discovery.enabled" = false;
 						"extensions.shield-recipe-client.enabled" = false;
-						"app.shield.optoutstudies.enabled" = false;
+						#"app.shield.optoutstudies.enabled" = false;
 						"loop.logDomains" = false;
 						
 						# Hide top stories
