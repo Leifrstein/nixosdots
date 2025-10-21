@@ -26,7 +26,8 @@
       #xdg-desktop-portal-gtk
       #pavucontrol
       #lxqt.pavucontrol-qt
-      satty
+      #satty
+      flameshot
       grim
       slurp
       pwvucontrol

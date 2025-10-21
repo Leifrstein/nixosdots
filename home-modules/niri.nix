@@ -267,7 +267,7 @@
         "Mod+Shift+V".action = actions.switch-focus-between-floating-and-tiling;
 
         #"Print".action = actions.screenshot;
-        "Print".action = sh "grim -g \'$(slurp)\' - | satty --filename - --output-filename - --copy-command wl-copy"; # Copy selected region to clipboard
+        "Print".action = sh "flameshot"; # Copy selected region to clipboard
         #"Ctrl+Print".action = actions.screenshot-screen;
         "Ctrl+Print".action = sh "grim - | wl-copy"; # Capture whole screen to clipboard
         #"Alt+Print".action = actions.screenshot-window;
