@@ -124,8 +124,11 @@
       {
         command = ["qbittorrent"];
       }
-      {
-	    command = ["mako"];
+      #{
+	  #  command = ["mako"];
+	  #}
+	  {
+		command = ["swaync"];
 	  }
     ];
 
