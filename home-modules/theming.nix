@@ -44,6 +44,7 @@
       accent
       ;
     swaync.enable = false;
+    mako.enable = true;
   };
 
   # Required for btop theme

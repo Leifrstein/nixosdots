@@ -46,7 +46,8 @@
       zotero
       gimp
       geany
-      swaynotificationcenter
+      #swaynotificationcenter
+      mako
       waybar
       inkscape
       syncplay

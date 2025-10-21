@@ -88,15 +88,16 @@
       {
         # Lets clients without xdg-decoration protocols have transparent backgrounds
         draw-border-with-background = false;
-        geometry-corner-radius = let
-          radius = 12.0;
-        in {
-          bottom-left = radius;
-          bottom-right = radius;
-          top-left = radius;
-          top-right = radius;
-        };
-        clip-to-geometry = true;
+        # Rounded corners
+        #geometry-corner-radius = let
+        #  radius = 12.0;
+        #in {
+        #  bottom-left = radius;
+        #  bottom-right = radius;
+        #  top-left = radius;
+        #  top-right = radius;
+        #};
+        #clip-to-geometry = true;
         # Open clients to take up maximum space by default
         open-maximized = true;
       }
@@ -123,6 +124,9 @@
       {
         command = ["qbittorrent"];
       }
+      {
+	    command = ["mako"];
+	  }
     ];
 
     binds = let
