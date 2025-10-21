@@ -271,7 +271,7 @@
         #"Ctrl+Print".action = actions.screenshot-screen;
         "Ctrl+Print".action = sh "grim - | wl-copy"; # Capture whole screen to clipboard
         #"Alt+Print".action = actions.screenshot-window;
-        "Alt+Print".aciton = sh "grim -g \'$(slurp)\' ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png') && grim -g \'$(slurp)\' - | wl-copy"; # Save screenshot to Screenshots folder
+        "Alt+Print".action = sh "grim -g \'$(slurp)\' ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png') && grim -g \'$(slurp)\' - | wl-copy"; # Save screenshot to Screenshots folder
 
         # The quit action will show a confirmation dialog to avoid accidental exits.
         "Mod+Shift+E".action = actions.quit;
