@@ -1,5 +1,5 @@
 {...}: {
-  home.file.".config/pipewire/pipewire.conf" = {
+  home.file.".config/pipewire.conf.d/custom.conf" = {
     text = ''
       context.properties = {
       	default.clock.rate = 48000
@@ -8,16 +8,9 @@
       	default.clock.min-quantum = 512
       	default.clock.max-quantum = 1024
       }
-      context.modules = {
-	{ name = libpipewire-module-rt }
-	{ name = libpipewire-module-alsa-sink }
-	{ name = libpipewire-module-alsa-source }
-	{ name = libpipewire-module-native-protocol-unix }
-      }
-      log.level = 3
     '';
   };
-  home.file.".config/pipewire/pipewire-pulse.conf" = {
+  home.file.".config/pipewire-pulse.conf.d/custom.conf" = {
     text = ''
       pulse.properties = {
       	pulse.min.req = 512/48000
