@@ -13,10 +13,10 @@
     #  name = "Papirus-Dark";
     #};
     theme = {
-			name = "Catppuccin-GTK-Mauve-Dark";
+			name = "Catppuccin-GTK-Purple-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {
 				tweaks = ["black"];
-				accent = ["mauve"];
+				accent = ["purple"];
 				shade = "dark";
 			};
     };
