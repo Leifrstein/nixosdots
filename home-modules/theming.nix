@@ -13,8 +13,11 @@
     #  name = "Papirus-Dark";
     #};
     theme = {
-      package = pkgs.rose-pine-gtk-theme;
-      name = "rose-pine";
+      package = pkgs.magnetic-catppuccin-gtk.override {
+				tweaks = ["black"];
+				accent = ["mauve"];
+				shade = "dark";
+			};
     };
   };
 

@@ -179,7 +179,7 @@
         ];
 
         # Close focused window.
-        "Mod+Q".action = actions.close-window;
+        "Mod+Shift+Q".action = actions.close-window;
 
         # Change window/column focus
         "Mod+H".action = actions.focus-column-left-or-last;
