@@ -74,6 +74,7 @@
       dua
       gparted
       nautilus
+      nautilus-open-any-terminal
       xarchiver
       sushi
       jq
@@ -100,10 +101,6 @@
     nix-index.enable = true; # Database for command not found in shell
     dircolors.enable = true; # Color ls output
     home-manager.enable = true; # lets Home Manager manage itself
-    nautilus-open-any-terminal = {
-			enable = true;
-			terminal = "ghostty";
-		};
   };
 
   services = {
