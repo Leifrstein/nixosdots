@@ -8,7 +8,7 @@
     enable = true;
     extraPackages = with pkgs; [
       bat-extras.batdiff
-      bat-extras.batgrep
+      #bat-extras.batgrep
       bat-extras.batman
       bat-extras.batpipe
       # required for batpipe

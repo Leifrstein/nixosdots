@@ -71,7 +71,7 @@
         w3m = "w3m -no-cookie -v";
         ls = "eza --icons -l -T -L=1";
         # bat
-        bgrep = "batgrep";
+        #bgrep = "batgrep";
         cat = "bat --paging=never";
         less = "bat --paging=always";
         man = "batman";
