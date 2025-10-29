@@ -86,6 +86,7 @@
             istilldontcareaboutcookies
             violentmonkey
             reddit-enhancement-suite
+            old-reddit-redirect
             enhancer-for-youtube
             sponsorblock
             # Reminder to install xBrowserSync, can't be done declaratively to my knowledge
