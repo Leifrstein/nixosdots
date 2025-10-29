@@ -22,7 +22,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-	xivlauncher
+    xivlauncher
+    bottles
   ];
 
   # Game launch options

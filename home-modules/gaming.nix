@@ -16,7 +16,6 @@
     gpu-screen-recorder-gtk
     dualsensectl # Dualsense tool - requires compiling
     trigger-control # Dualsense triggers settings - requires compiling
-    bottles
     umu-launcher
     #logmein-hamachi
     #haguichi
