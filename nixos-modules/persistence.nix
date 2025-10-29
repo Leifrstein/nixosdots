@@ -44,6 +44,7 @@
 				".config/0ad" # 0 A.D. configuration
 				".config/obs-studio" # OBS configuration
 				".local/share/lutris" # Lutris runtime data
+				".local/share/bottles" # Bottles runtime data
 				".local/share/PrismLauncher" # Prism Launcher data
 				".local/share/Steam" # Steam games and save data
 				".local/share/0ad" # 0 A.D. save data
