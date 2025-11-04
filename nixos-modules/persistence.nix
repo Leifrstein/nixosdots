@@ -49,7 +49,6 @@
         ".local/share/Steam" # Steam games and save data
         ".local/share/0ad" # 0 A.D. save data
         ".klei" # Don't Starve Together data
-        ".steam/root/compatibilitytools.d" # Proton folder
         ".xlcore" # Final Fantasy XIV data
 
         # Other important stuff
