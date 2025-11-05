@@ -36,7 +36,7 @@
     configFile."handlr/handlr.toml" = {
       force = true;
       source =
-        (inputs.nixago.lib.${pkgs.system}.make {
+        (inputs.nixago.lib.${pkgs.stdenv.hostPlatform.system}.make {
           data = {
             enable_selector = false;
             selector = "fuzzel --dmenu --prompt='Open With: '";
@@ -54,7 +54,7 @@
           output = "handlr.toml";
         })
         .configFile;
-      };
+    };
   };
 
   home.packages = with pkgs; [
