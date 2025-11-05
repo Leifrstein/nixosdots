@@ -112,5 +112,5 @@
     playerctld.enable = true;
   };
 
-  systemd.user.tmpfiles.rules = ["L ${config.home.homeDirectory}/nixos - - - - /etc/nixos"];
+  systemd.user.tmpfiles.settings = ["L ${config.home.homeDirectory}/nixos - - - - /etc/nixos"];
 }
