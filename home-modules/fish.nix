@@ -65,7 +65,7 @@
         rd = "rmdir";
         md = "mkdir";
         rm = "rm --interactive";
-        du = lib.getExe pkgs.du-dust;
+        du = lib.getExe pkgs.dust;
         df = lib.getExe pkgs.duf;
         fd = "fd -Lu";
         w3m = "w3m -no-cookie -v";
@@ -90,23 +90,22 @@
         list-generations = "nix-env -p ~/.local/state/nix/profiles/home-manager --list-generations";
         slist-generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
       };
-      plugins =
-        (
-          map
-          (name: {
-            inherit name;
-            src = pkgs.fishPlugins."${name}".src;
-          })
-          [
-            "autopair"
-            "done"
-            "fish-bd"
-            "fish-you-should-use"
-            "fzf-fish"
-            "grc"
-            "plugin-sudope"
-          ]
-        );
+      plugins = (
+        map
+        (name: {
+          inherit name;
+          src = pkgs.fishPlugins."${name}".src;
+        })
+        [
+          "autopair"
+          "done"
+          "fish-bd"
+          "fish-you-should-use"
+          "fzf-fish"
+          "grc"
+          "plugin-sudope"
+        ]
+      );
     };
     ripgrep.enable = true;
     fd.enable = true;
