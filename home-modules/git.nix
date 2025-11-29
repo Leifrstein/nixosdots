@@ -24,6 +24,9 @@
     };
     lazygit = {
       enable = true;
+      # Write the HM config to a different filename
+      settingsFile = ".config/lazygit/hm-config.yml";
+      
       settings = {
         theme.nerdFontsVersion = 3;
         update.method = false;
@@ -42,7 +45,7 @@
     };
   };
   
-  # Let LazyGit store dynamic changes separately https://github.com/jesseduffield/lazygit/issues/4595
+  # User-writable LazyGit overrides https://github.com/jesseduffield/lazygit/issues/4595
   home.file.".config/lazygit/local-config.yml".text = ''
     # LazyGit user-writable overrides
   '';
@@ -54,8 +57,8 @@
     DELTA_FEATURES = "+side-by-side";
     # Merge HM config and user-writable config
     LAZYGIT_CONFIG_FILE = builtins.concatStringsSep "," [
-      "${config.home.homeDirectory}/.config/lazygit/config.yml"
       "${config.home.homeDirectory}/.config/lazygit/local-config.yml"
+      "${config.home.homeDirectory}/.config/lazygit/hm-config.yml"
     ];
   };
 }
