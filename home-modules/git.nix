@@ -24,9 +24,6 @@
     };
     lazygit = {
       enable = true;
-      # Write the HM config to a different filename
-      settingsFile = ".config/lazygit/hm-config.yml";
-      
       settings = {
         theme.nerdFontsVersion = 3;
         update.method = false;
@@ -58,7 +55,7 @@
     # Merge HM config and user-writable config
     LAZYGIT_CONFIG_FILE = builtins.concatStringsSep "," [
       "${config.home.homeDirectory}/.config/lazygit/local-config.yml"
-      "${config.home.homeDirectory}/.config/lazygit/hm-config.yml"
+      "${config.home.homeDirectory}/.config/lazygit/config.yml"
     ];
   };
 }
