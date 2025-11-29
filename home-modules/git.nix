@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
 # Reminder to backup the key required to push. After fresh install, put it in .ssh and navigate to the dotfiles to do git push and finish setup.
   programs = {
     git = {
@@ -42,8 +42,11 @@
     };
   };
   
-  # Local managed file to prevent https://github.com/jesseduffield/lazygit/issues/4595
-  home.file.".config/lazygit/config.yml".text = builtins.readFile ./config.yml;
+  # Let LazyGit store dynamic changes separately https://github.com/jesseduffield/lazygit/issues/4595
+  home.file.".config/lazygit/local-config.yml".text = ''
+    # this file is writable
+  '';
+  environment.variables.LAZYGIT_CONFIG_FILE = "${config.home.homeDirectory}/.config/lazygit/local-config.yml";
 
   home.sessionVariables = {
     # Ensure bat's line numbers don't show up and mess things up
