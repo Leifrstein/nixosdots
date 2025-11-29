@@ -50,7 +50,7 @@
         greetStickerPicker.enable = true;
         implicitRelationships.enable = true;
         mentionAvatars.enable = true;
-        moreKaomoji.enable = true;
+        #moreKaomoji.enable = true;
         mutualGroupDMs.enable = true;
         noF1.enable = true;
         readAllNotificationsButton.enable = true;
