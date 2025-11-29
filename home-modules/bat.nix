@@ -8,7 +8,7 @@
     enable = true;
     extraPackages = with pkgs; [
       bat-extras.batdiff
-      #bat-extras.batgrep # Re-enable when fixed upstream https://github.com/NixOS/nixpkgs/issues/454391
+      bat-extras.batgrep # Re-enable when fixed upstream https://github.com/NixOS/nixpkgs/issues/454391
       bat-extras.batman
       bat-extras.batpipe
       # required for batpipe

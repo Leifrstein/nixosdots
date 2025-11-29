@@ -11,7 +11,7 @@ in {
         "wheel" # Enable ‘sudo’ for the user
         "networkmanager" # Change network settings
         "gamemode" # Manage gamemode
-        "pipewire" # Attempt to improve audio latency by givin it priority
+        "pipewire" # Attempt to improve audio latency by giving it priority
       ];
       hashedPasswordFile = "${passwordDir}/${user}";
     };
