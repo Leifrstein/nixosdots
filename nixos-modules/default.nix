@@ -144,9 +144,6 @@
   # Tell electron apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
-  # Let LazyGit store dynamic changes separately https://github.com/jesseduffield/lazygit/issues/4595
-  environment.variables.LAZYGIT_CONFIG_FILE = "${config.home.homeDirectory}/.config/lazygit/local-config.yml";
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
