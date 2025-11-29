@@ -9,9 +9,13 @@
     settings = let
       nerdFontIcons = builtins.fromTOML (
         builtins.readFile (
-          config.programs.starship.package.src + /docs/public/presets/toml/nerd-font-symbols.toml
+          config.programs.starship.package.src
+          + /docs/public/presets/toml/nerd-font-symbols.toml
         )
       );
+
+      # Remove the problematic key
+      cleanNerdFontIcons = builtins.removeAttrs nerdFontIcons ["$schema"];
       notLang = [
         "aws"
         "directory"
@@ -26,7 +30,7 @@
         "package"
         "pijul_channel"
       ];
-      langNames = builtins.filter (name: !builtins.elem name notLang) (builtins.attrNames nerdFontIcons);
+      langNames = builtins.filter (name: !builtins.elem name notLang) (builtins.attrNames cleanNerdFontIcons);
       mkLangSeg = name: {
         "${name}" = {
           style = "fg:green bg:surface0";
@@ -36,7 +40,7 @@
       langSegments = builtins.foldl' (x: y: x // y) {} (builtins.map mkLangSeg langNames);
     in
       lib.foldl lib.attrsets.recursiveUpdate {} [
-        nerdFontIcons
+        cleanNerdFontIcons
         langSegments
         {
           format = lib.concatStrings (

@@ -41,6 +41,11 @@
       };
     };
   };
+  
+  # Local managed file to prevent https://github.com/jesseduffield/lazygit/issues/4595
+  home.file.".config/lazygit/local-config.yml".text = ''
+    # this file is writable
+  '';
 
   home.sessionVariables = {
     # Ensure bat's line numbers don't show up and mess things up
