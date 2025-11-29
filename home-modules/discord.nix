@@ -37,13 +37,13 @@
         betterGifAltText.enable = true;
         betterGifPicker.enable = true;
         biggerStreamPreview.enable = true;
-        blurNSFW.enable = true;
+        blurNsfw.enable = true;
         callTimer = {
           enable = true;
           format = "human";
         };
-        clearURLs.enable = true;
-        customRPC.enable = true;
+        clearUrLs.enable = true;
+        customRpc.enable = true;
         #fakeNitro.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
