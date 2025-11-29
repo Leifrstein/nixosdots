@@ -44,7 +44,7 @@
   
   # Let LazyGit store dynamic changes separately https://github.com/jesseduffield/lazygit/issues/4595
   home.file.".config/lazygit/local-config.yml".text = ''
-    # LazyGit user-writable config
+    # LazyGit user-writable overrides
   '';
 
   home.sessionVariables = {
@@ -52,7 +52,10 @@
     DELTA_PAGER = "bat --plain";
     # Ensure --side-by-side is only used for `git diff`
     DELTA_FEATURES = "+side-by-side";
-    # Use local config file to avoid above issue
-    LAZYGIT_CONFIG_FILE = "/home/leifrstein/.config/lazygit/local-config.yml";
+    # Merge HM config and user-writable config
+    LAZYGIT_CONFIG_FILE = builtins.concatStringsSep "," [
+      "${config.home.homeDirectory}/.config/lazygit/config.yml"
+      "${config.home.homeDirectory}/.config/lazygit/local-config.yml"
+    ];
   };
 }
