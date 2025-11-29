@@ -10,7 +10,7 @@
     font = let
       font = config.stylix.fonts.monospace;
       sizes = config.stylix.fonts.sizes;
-      mkttyfont = inputs.ttf-to-tty.packages.${pkgs.system}.mkttyfont;
+      mkttyfont = inputs.ttf-to-tty.packages.${pkgs.stdenv.hostPlatform.system}.mkttyfont;
       dpi = toString 80;
     in
       pkgs.runCommand "${font.package.name}.psf"
