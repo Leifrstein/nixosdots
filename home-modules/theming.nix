@@ -8,10 +8,6 @@
   gtk = {
     enable = true;
     cursorTheme = config.stylix.cursor;
-    #iconTheme = {
-    #  package = pkgs.papirus-icon-theme;
-    #  name = "Papirus-Dark";
-    #};
     theme = {
 			name = "Catppuccin-GTK-Purple-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {

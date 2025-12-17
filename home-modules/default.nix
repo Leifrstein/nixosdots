@@ -21,11 +21,6 @@
       killall
       brightnessctl
       playerctl
-      #xdg-desktop-portal
-      #xdg-desktop-portal-gnome
-      #xdg-desktop-portal-gtk
-      #pavucontrol
-      #lxqt.pavucontrol-qt
       flameshot
       grim
       slurp
@@ -45,12 +40,10 @@
       qbittorrent
       nicotine-plus
       system-config-printer
-      #onlyoffice-bin
       calibre
       zotero
       gimp
       geany
-      #swaynotificationcenter
       mako
       waybar
       inkscape
@@ -78,10 +71,11 @@
       xarchiver
       sushi
       jq
-      #woeusb
-      usbimager
       logseq
       filezilla
+      rar
+      p7zip
+      zip
     ];
 
     sessionVariables = {

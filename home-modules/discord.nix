@@ -44,7 +44,7 @@
         };
         clearUrLs.enable = true;
         customRpc.enable = true;
-        #fakeNitro.enable = true;
+        fakeNitro.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
         greetStickerPicker.enable = true;
