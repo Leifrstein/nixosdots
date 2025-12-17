@@ -73,9 +73,7 @@
       jq
       logseq
       filezilla
-      rar
       p7zip
-      zip
     ];
 
     sessionVariables = {
