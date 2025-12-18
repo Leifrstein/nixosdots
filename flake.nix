@@ -103,7 +103,7 @@
     };
     
     # Steam Homebrew
-    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium?ref=legacy";
+    millennium.url = "git+https://github.com/michaelgoldenn/Millennium";
   };
 
   outputs = inputs @ {
