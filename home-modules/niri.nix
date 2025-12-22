@@ -36,7 +36,8 @@
       keyboard.xkb = {
         # See xkeyboard-config(7) for options
         layout = "br";
-        #variant = "colemak";
+        #layout = "us";
+        #variant = "colemak_dh";
         #options = "caps:escape_shifted_capslock";
       };
     };

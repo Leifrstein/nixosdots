@@ -45,6 +45,7 @@
       ;
     swaync.enable = false;
     mako.enable = true;
+    gitui.enable = true;
   };
 
   # Required for btop theme

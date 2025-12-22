@@ -63,7 +63,7 @@
         ".local/share/keyrings" # Gnome Keyrings
         ".local/share/nautilus" # Nautilus state
         ".local/share/TelegramDesktop" # Telegram account data
-        ".local/state/lazygit"
+        ".local/state/gitui"
         ".local/state/wireplumber"
         ".mozilla" # Firefox data
         ".librewolf" # Librewolf data

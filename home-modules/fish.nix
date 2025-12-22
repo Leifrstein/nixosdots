@@ -78,8 +78,6 @@
         diff = "batdiff";
         # tealdeer
         tldr = "PAGER='bat --plain' command tldr";
-        # lazygit
-        lg = "lazygit";
         # system rebuild
         nhs = "cd /home/leifrstein/nixos && sudo nixos-rebuild switch --flake .";
         nhb = "cd /home/leifrstein/nixos && sudo nixos-rebuild boot --flake .";

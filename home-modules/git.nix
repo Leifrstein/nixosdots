@@ -22,43 +22,8 @@
         interactive.keep-plus-minus-markers = false;
       };
     };
-    #lazygit = {
-    #enable = true;
-    #settings = {
-    #theme.nerdFontsVersion = 3;
-    #update.method = false;
-    #disableStartupPopups = true;
-    #git = let
-    #logCmd = "git log --color=always";
-    #in {
-    #paging = {
-    #colorArg = "always";
-    #pager = ''DELTA_FEATURES="+" delta --paging=never'';
-    #};
-    #branchLogCmd = "${logCmd} {{branchName}}";
-    #allBranchesLogCmds = ["${logCmd} --all"];
-    #};
-    #};
-    #};
+    gitui.enable = true;
   };
-
-  # LazyGit overrides https://github.com/jesseduffield/lazygit/issues/4595
-  home.file.".config/lazygit/config.yml".text = ''
-    git:
-      paging:
-        colorArg: always
-        pager: 'DELTA_FEATURES="+" delta --paging=never'
-      log:
-        branchLogCmd: 'git log --color=always {{branchName}}'
-        allBranchesLogCmds:
-          - 'git log --color=always --all'
-    theme:
-      nerdFontsVersion: 3
-    disableStartupPopups: true
-    update:
-      method: false
-  '';
-  home.packages = with pkgs; [lazygit];
 
   home.sessionVariables = {
     # Ensure bat's line numbers don't show up and mess things up
