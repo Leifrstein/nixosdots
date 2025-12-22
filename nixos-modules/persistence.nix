@@ -11,7 +11,9 @@
       "/etc/NetworkManager/system-connections" # Network connections
       "/var/lib/bluetooth" # Bluetooth connections
       "/var/lib/clamav" # ClamAV signature database
+      #"/var/lib/flatpak"
       "/var/lib/qbittorrent" # qBittorrent state
+      "/var/lib/libvirt"
       "/tmp" # Persist tmp so it's not mounted on tmpfs and ensure there's enough space for rebuilds, it'll be cleaned by setting boot.tmp.cleanOnBoot to true
       # Nix config
       rec {
@@ -36,6 +38,7 @@
         "Music"
         "Pictures"
         "Videos"
+        "VM"
 
         # Gaming-specific stuff
         ".cache/lutris" # Lutris banner cache

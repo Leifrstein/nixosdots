@@ -12,6 +12,7 @@ in {
         "networkmanager" # Change network settings
         "gamemode" # Manage gamemode
         "pipewire" # Attempt to improve audio latency by giving it priority
+        "libvirtd" # Access to virtualisation settings
       ];
       hashedPasswordFile = "${passwordDir}/${user}";
     };
