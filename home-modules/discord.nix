@@ -2,21 +2,23 @@
   programs.nixcord = {
     enable = true;
     discord.enable = false;
-    vesktop = {
+    equibop = {
       enable = true;
       settings = {
         discordBranch = "stable";
         staticTitle = true;
         splashTheming = true;
+        enableSplashScreen = false;
         minimizeToTray = true;
         clickTrayToShowHide = true;
         arRPC = true;
+        splashProgress = true;
       };
       state = {
         firstLaunch = false;
       };
     };
-    config = {
+    equibopConfig = {
       themeLinks = [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/${config.catppuccin.flavor}.theme.css"
       ];
@@ -24,7 +26,7 @@
         alwaysAnimate.enable = true;
         anonymiseFileNames = {
           enable = true;
-          anonymiseByDefault = true;
+          anonymiseByDefault = false;
         };
         betterFolders = {
           enable = true;
@@ -36,12 +38,14 @@
         };
         betterGifAltText.enable = true;
         betterGifPicker.enable = true;
+        betterInvites.enable = true;
         biggerStreamPreview.enable = true;
-        #blurNsfw.enable = true;
+        blurNsfw.enable = true;
         callTimer = {
           enable = true;
           format = "human";
         };
+        characterCounter.enable = true;
         clearUrLs.enable = true;
         customRpc.enable = true;
         fakeNitro.enable = true;
@@ -50,9 +54,14 @@
         greetStickerPicker.enable = true;
         implicitRelationships.enable = true;
         mentionAvatars.enable = true;
-        #moreKaomoji.enable = true;
+        moreKaomoji.enable = true;
         mutualGroupDMs.enable = true;
         noF1.enable = true;
+        noReplyMention = {
+          enable = true;
+          inverseShiftReply = true;
+        };
+        previewMessage.enable = true;
         readAllNotificationsButton.enable = true;
         sendTimestamps.enable = true;
         silentTyping.enable = true;
@@ -62,6 +71,7 @@
         viewRaw.enable = true;
         volumeBooster.enable = true;
         whoReacted.enable = true;
+        whosWatching.enable = true;
         youtubeAdblock.enable = true;
       };
     };
