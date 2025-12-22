@@ -18,7 +18,7 @@
     spice-gtk
     spice-protocol
     virt-viewer
-    win-virtio
+    virtio-win
     win-spice
   ];
 
