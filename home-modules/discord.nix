@@ -37,7 +37,7 @@
         betterGifAltText.enable = true;
         betterGifPicker.enable = true;
         biggerStreamPreview.enable = true;
-        blurNsfw.enable = true;
+        #blurNsfw.enable = true;
         callTimer = {
           enable = true;
           format = "human";
