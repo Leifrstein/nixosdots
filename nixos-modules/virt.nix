@@ -6,8 +6,6 @@
         package = pkgs.qemu_kvm;
         vhostUserPackages = with pkgs; [virtiofsd];
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [pkgs.OVMFFull.fd];
       };
     };
   };
