@@ -22,6 +22,9 @@
       themeLinks = [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/${config.catppuccin.flavor}.theme.css"
       ];
+      enabledThemes = [
+        "${config.catppuccin.flavor}.theme.css"
+      ];
       plugins = {
         alwaysAnimate.enable = true;
         anonymiseFileNames = {
