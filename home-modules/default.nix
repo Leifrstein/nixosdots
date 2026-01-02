@@ -94,6 +94,9 @@
     dircolors.enable = true; # Color ls output
     home-manager.enable = true; # lets Home Manager manage itself
   };
+  
+  # Add to PATH
+  home.sessionPath = ["$HOME/.local/bin"];
 
   services = {
     cliphist.enable = true;
