@@ -54,7 +54,7 @@
       movit
       mediainfo
       libmediainfo
-      tenacity
+      #tenacity reenable when fix reaches unstable https://github.com/NixOS/nixpkgs/issues/475574
       imagemagick
       qgis
       texinfo

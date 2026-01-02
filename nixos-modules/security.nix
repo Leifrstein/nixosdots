@@ -8,6 +8,9 @@
   #    fangfrisch.enable = true;
   #  };
   #};
+  
+  # DNS
+  networking.nameservers = ["1.1.1.1" "8.8.8.8"];
 
   security = {
     sudo = {
