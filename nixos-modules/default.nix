@@ -62,8 +62,7 @@
 
   # Bootloader
   boot = {
-    #kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
     loader = {
       grub = {
         device = "nodev";

@@ -96,7 +96,7 @@
   };
   
   # Add to PATH
-  home.sessionPath = ["$HOME/.local/bin"];
+  #home.sessionPath = ["$HOME/.local/bin"];
 
   services = {
     cliphist.enable = true;
