@@ -56,6 +56,7 @@
       #(import ../pkgs)
       # Nix user repository
       inputs.nur.overlays.default
+      inputs.self.overlays.lutris-extra-libs # Remove when fixed https://github.com/NixOS/nixpkgs/issues/410677
     ];
     config.allowUnfree = true;
   };
