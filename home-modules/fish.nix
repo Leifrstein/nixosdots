@@ -79,9 +79,12 @@
         # tealdeer
         tldr = "PAGER='bat --plain' command tldr";
         # system rebuild
-        nhs = "cd /home/leifrstein/nixos && sudo nixos-rebuild switch --flake .";
-        nhb = "cd /home/leifrstein/nixos && sudo nixos-rebuild boot --flake .";
-        nhd = "cd /home/leifrstein/nixos && sudo nixos-rebuild dry-activate --flake .";
+        nixosrs = "cd /home/leifrstein/nixos && sudo nixos-rebuild switch --flake .";
+        nixosrb = "cd /home/leifrstein/nixos && sudo nixos-rebuild boot --flake .";
+        nixosrd = "cd /home/leifrstein/nixos && sudo nixos-rebuild dry-activate --flake .";
+        nhs = "cd /home/leifrstein/nixos && nh os switch .";
+        nhb = "cd /home/leifrstein/nixos && nh os boot .";
+        nht = "cd /home/leifrstein/nixos && nh os test .";
         # generation management
         gc-clean = "nix-collect-garbage --delete-older-than 10d";
         sgc-clean = "sudo nix-collect-garbage --delete-older-than 10d";
