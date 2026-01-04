@@ -135,9 +135,11 @@
         ...
       }: {
         # Remove when fixed https://github.com/NixOS/nixpkgs/issues/410677
-        nixpkgs.overlays = [
-          flake.overlays.lutris-extra-libs
-        ];
+        nixpkgs = {
+          overlays = [
+            flake.overlays.lutris-extra-libs
+          ];
+        };
 
         formatter = pkgs.alejandra;
         packages = import ./scripts args;
