@@ -113,17 +113,6 @@
         inputs.ez-configs.flakeModule
       ];
 
-      # Workaround for winetricks error https://github.com/NixOS/nixpkgs/issues/410677
-      flake.overlays.lutris-extra-libs = final: prev: {
-        lutris = prev.lutris.override {
-          extraLibraries = pkgs:
-            with pkgs; [
-              libadwaita
-              gtk4
-            ];
-        };
-      };
-
       ezConfigs = {
         root = ./.;
         globalArgs = {
@@ -131,6 +120,9 @@
           inherit (flake) diskoConfigurations;
         };
       };
+      
+      # Workaround for winetricks error https://github.com/NixOS/nixpkgs/issues/410677
+      flake.overlays.lutris-extra-libs = import ./overlays/lutris.nix;
 
       # Expose this to use flake directly with Disko
       flake.diskoConfigurations = import ./disko-configurations;
