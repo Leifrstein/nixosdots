@@ -33,7 +33,6 @@
       swww
       strawberry
       tree
-      tuxpaint
       wl-clipboard
       telegram-desktop
       ntfs3g
@@ -49,7 +48,6 @@
       inkscape
       syncplay
       yt-dlp
-      obs-studio
       ffmpeg
       movit
       mediainfo

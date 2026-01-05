@@ -3,17 +3,14 @@
     gamescope # Used by Lutris for control over game resolution
     lutris
     prismlauncher
-    zeroad
     temurin-bin # Temurin JDK 21 binary
     mangohud
     goverlay
     ludusavi
     protontricks
-    protonup-ng
     wine
     winetricks
-    gpu-screen-recorder
-    gpu-screen-recorder-gtk
+    obs-studio
     dualsensectl # Dualsense tool - requires compiling
     trigger-control # Dualsense triggers settings - requires compiling
     umu-launcher
