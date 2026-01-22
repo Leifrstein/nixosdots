@@ -83,6 +83,9 @@
     # Gaming tweaks
     # Provides a binary cache, so do not follow inputs
     nix-gaming.url = "github:fufexan/nix-gaming";
+    
+    # Dawn Winery Proton fork 
+    dw-proton.url = "github:Momoyaan/dwproton-flake";
 
     # Spotify customization
     spicetify-nix = {
