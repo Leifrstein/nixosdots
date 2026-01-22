@@ -9,10 +9,10 @@
     enable = true;
     cursorTheme = config.stylix.cursor;
     theme = {
-			name = "Catppuccin-GTK-Purple-Dark";
+			name = "Catppuccin-GTK-Mauve-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {
 				tweaks = ["black"];
-				accent = ["purple"];
+				accent = ["mauve"];
 				shade = "dark";
 			};
     };
