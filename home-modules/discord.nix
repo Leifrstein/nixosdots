@@ -1,4 +1,9 @@
-{config, inputs, ...}: {
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.nixcord = {
     enable = true;
     discord.enable = false;
@@ -8,9 +13,11 @@
       # TODO: remove when fixed
       # Apply Vesktop read-only state patch
       package = pkgs.equibop.overrideAttrs (oldAttrs: {
-        patches = (oldAttrs.patches or [ ]) ++ [
-          "${inputs.nixpkgs}/pkgs/by-name/ve/vesktop/fix_read_only_settings.patch"
-        ];
+        patches =
+          (oldAttrs.patches or [])
+          ++ [
+            "${inputs.nixpkgs}/pkgs/by-name/ve/vesktop/fix_read_only_settings.patch"
+          ];
       });
       settings = {
         discordBranch = "stable";
