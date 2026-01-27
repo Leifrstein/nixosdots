@@ -1,12 +1,18 @@
-{config, ...}: {
+{config, inputs, ...}: {
   programs.nixcord = {
     enable = true;
     discord.enable = false;
     config.autoUpdate = true;
     equibop = {
       enable = true;
+      # TODO: remove when fixed
+      # Apply Vesktop read-only state patch
+      package = pkgs.equibop.overrideAttrs (oldAttrs: {
+        patches = (oldAttrs.patches or [ ]) ++ [
+          "${inputs.nixpkgs}/pkgs/by-name/ve/vesktop/fix_read_only_settings.patch"
+        ];
       settings = {
-        discordBranch = "ptb";
+        discordBranch = "stable";
         staticTitle = true;
         splashTheming = true;
         enableSplashScreen = false;
@@ -19,13 +25,15 @@
         firstLaunch = false;
       };
     };
-    equibopConfig = {
+    config = {
       themeLinks = [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/${config.catppuccin.flavor}.theme.css"
       ];
       enabledThemes = [
         "${config.catppuccin.flavor}.theme.css"
       ];
+    };
+    equibopConfig = {
       plugins = {
         alwaysAnimate.enable = true;
         anonymiseFileNames = {
