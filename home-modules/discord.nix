@@ -11,6 +11,7 @@
         patches = (oldAttrs.patches or [ ]) ++ [
           "${inputs.nixpkgs}/pkgs/by-name/ve/vesktop/fix_read_only_settings.patch"
         ];
+      };
       settings = {
         discordBranch = "stable";
         staticTitle = true;
