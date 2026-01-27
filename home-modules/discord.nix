@@ -54,15 +54,15 @@
           enable = true;
           format = "human";
         };
-        clearUrLs.enable = true;
-        customRpc.enable = true;
+        ClearURLs.enable = true;
+        CustomRPC.enable = true;
         fakeNitro.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
         greetStickerPicker.enable = true;
         implicitRelationships.enable = true;
         mentionAvatars.enable = true;
-        mutualGroupDMs.enable = true;
+        MutualGroupDMs.enable = true;
         noF1.enable = true;
         noReplyMention = {
           enable = true;
