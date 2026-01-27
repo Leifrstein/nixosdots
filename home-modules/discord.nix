@@ -49,7 +49,7 @@
         betterGifAltText.enable = true;
         betterGifPicker.enable = true;
         biggerStreamPreview.enable = true;
-        blurNSFW.enable = true;
+        BlurNSFW.enable = true;
         callTimer = {
           enable = true;
           format = "human";
