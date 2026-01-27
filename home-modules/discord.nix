@@ -2,10 +2,11 @@
   programs.nixcord = {
     enable = true;
     discord.enable = false;
+    config.autoUpdate = true;
     equibop = {
       enable = true;
       settings = {
-        discordBranch = "stable";
+        discordBranch = "canary";
         staticTitle = true;
         splashTheming = true;
         enableSplashScreen = false;
