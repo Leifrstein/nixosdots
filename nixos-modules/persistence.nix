@@ -87,7 +87,8 @@
         ".config/libreoffice" # Libreoffice settings
         ".config/spotify" # Spotify user data
         ".config/strawberry" # Strawberry settings
-        ".config/equibop/sessionData" # Equibop user data
+        #".config/equibop/sessionData" # Equibop user data
+        ".config/vesktop/sessionData" # Vesktop user data
         ".config/StardewValley" # Stardew Valley data
         ".local/share/strawberry" # Strawberry cache
         ".local/share/zathura" # Zathura bookmarks, etc.
