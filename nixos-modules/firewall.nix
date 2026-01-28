@@ -4,6 +4,7 @@
       enable = true;
       # if packets are still dropped, they will show up in dmesg
       logReversePathDrops = true;
+      trustedInterfaces = ["virbr0"];
       allowedTCPPorts = [
         9090 # Calibre port
         9100 # Printing port
