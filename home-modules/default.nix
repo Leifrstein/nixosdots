@@ -31,7 +31,11 @@
       hardinfo2
       lm_sensors
       swww
-      strawberry
+      image-roll
+      tauon
+      mpd
+      rmpc
+      cozy
       tree
       wl-clipboard
       telegram-desktop
