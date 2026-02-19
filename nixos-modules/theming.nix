@@ -33,7 +33,8 @@
 
   stylix = {
     enable = true;
-    image = ../wallpaper/Sekiro2.png;
+    image = null;
+    #image = ../wallpaper/Sekiro2.png;
 
     # Set a theme just so one does not have to be automatically generated
     # Remove when stylix#248 is resolved.

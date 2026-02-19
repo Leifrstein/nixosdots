@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   systemd.user.services = {
-    # Enable with systemctl --user enable luduludusavi-backup
+    # Enable with systemctl --user enable ludusavi-backup
     "ludusavi-backup" = {
       # Check log with journalctl -u ludusavi-backup.service / journalctl -b
       Unit = {
